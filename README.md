@@ -1,8 +1,5 @@
 ```
-git clone https://github.com/alphabitdev/tt
-cd tt
-chmod +x ./init.sh
-./init.sh
+git clone https://github.com/alphabitdev/tt && cd tt && chmod +x ./init.sh && ./init.sh
 ```
 
 step 1: update
