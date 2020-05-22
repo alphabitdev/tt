@@ -30,7 +30,7 @@ cp ./files/sshd_config /etc/ssh/sshd_config
 sudo systemctl restart sshd
 
 # 8
-cat .files/sysctl.conf >> /etc/sysctl.conf
+cat ./files/sysctl.conf >> /etc/sysctl.conf
 sysctl --system
 service procps start
 
@@ -42,14 +42,7 @@ ufw enable
 
 # 10
 apt install fail2ban -y
-touch /etc/fail2ban/jail.d/ssh.conf
-echo "[sshd]
-
-enabled  = true
-port     = 22
-filter   = sshd
-logpath  = /var/log/auth.log
-maxretry = 3" > /etc/fail2ban/jail.d/ssh.conf
+cp ./files/sshjail.conf /etc/fail2ban/jail.d/ssh.conf
 systemctl restart fail2ban
 fail2ban-client status
 fail2ban-client status sshd
@@ -57,3 +50,11 @@ fail2ban-client status sshd
 # 11
 apt install ntp -y
 sntp --version
+
+
+cmp --silent ./files/sshd_config /etc/ssh/sshd_config || echo "sshd_config IS NOT COPIED!!!!"
+cmp --silent ./files/sysctl.conf /etc/sysctl.conf || echo "sysctl.conf IS NOT COPIED!!!!"
+cmp --silent ./files/sshjail.conf /etc/fail2ban/jail.d/ssh.conf || echo "sshjail.conf IS NOT COPIED!!!!"
+su alpha
+echo "REBOOOOT"
+sudo reboot
