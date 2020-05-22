@@ -1,5 +1,5 @@
 Port 22
-AllowUsers admin
+AllowUsers alpha
 
 Protocol 2
 
