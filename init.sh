@@ -41,7 +41,7 @@ echo "# The "order" line is only used by old versions of the C library.
 
 # 10
 apt install ufw -y
-ufw reset
+ufw reset -y
 ufw allow 22/tcp
 ufw enable
 
