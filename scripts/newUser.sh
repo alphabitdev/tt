@@ -18,8 +18,8 @@ cd /home/"$USER"
 mkdir /home/"$USER"/.ssh
 touch /home/"$USER"/.ssh/authorized_keys
 wget "$KEY_URL"
-cat key.pub >> /home/"$USER"/.ssh/authorized_keys
-rm key.pub
+cat pub.key >> /home/"$USER"/.ssh/authorized_keys
+rm pub.key
 chown -R "$USER":"$USER" /home/"$USER"/.ssh
 chmod 600 /home/"$USER"/.ssh/authorized_keys
 chmod 700 /home/"$USER"/.ssh
