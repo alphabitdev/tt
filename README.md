@@ -1,3 +1,9 @@
+```
+git clone https://github.com/alphabitdev/tt
+chmod +x tt/init.sh
+tt/init.sh
+```
+
 step 1: update
 
 step 2: Secure shared memory
