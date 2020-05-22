@@ -7,7 +7,7 @@ then
 fi
 if [ $# -ne 2 ]
 then
-    KEY_URL="https://raw.githubusercontent.com/alphabitdev/tt/master/files/key.pub"
+    KEY_URL="https://raw.githubusercontent.com/alphabitdev/tt/master/files/pub.key"
 else
     KEY_URL=$2
 fi
