@@ -36,7 +36,6 @@ service procps start
 
 # 9
 apt install ufw -y
-ufw reset
 ufw allow 22/tcp
 ufw enable
 
