@@ -11,6 +11,7 @@ then
 else
     KEY_URL=$2
 fi
+
 USER=$1
 sudo adduser "$USER"
 cd /home/"$USER"
