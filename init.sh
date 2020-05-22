@@ -26,37 +26,32 @@ sudo usermod -aG admin alpha
 sudo dpkg-statoverride --update --add root admin 4750 /bin/su
 
 # 7
-su alpha
-sudo ls /home/alpha/.ssh
-exit
-
-# 8
 cp ./files/sshd_config /etc/ssh/sshd_config
 sudo systemctl restart sshd
 
-# 9
+# 8
 cat .files/sysctl.conf >> /etc/sysctl.conf
 sysctl --system
 service procps start
 
-# 10
+# 9
 echo "# The "order" line is only used by old versions of the C library.
 ​order bind,hosts
 ​nospoof on" > /etc/host.conf
 
-# 11
+# 10
 apt install ufw -y
 ufw reset
-ufw allow 1234/tcp
+ufw allow 22/tcp
 ufw enable
 
-# 12
+# 11
 apt install fail2ban -y
 touch /etc/fail2ban/jail.d/ssh.conf
 echo "[sshd]
 
 enabled  = true
-port     = 1234
+port     = 22
 filter   = sshd
 logpath  = /var/log/auth.log
 maxretry = 3" > /etc/fail2ban/jail.d/ssh.conf
@@ -64,12 +59,12 @@ systemctl restart fail2ban
 fail2ban-client status
 fail2ban-client status sshd
 
-# 13
+# 12
 apt install ntp -y
 sntp --version
 
 
-#se linux
+# 13
 systemctl stop apparmor
 apt purge apparmor -y
 apt update
@@ -91,7 +86,3 @@ SELINUXTYPE=default
 
 # SETLOCALDEFS= Check local definition changes
 SETLOCALDEFS=0" > /etc/selinux/config
-
-
-
-

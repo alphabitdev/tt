@@ -1,7 +1,8 @@
 ```
 git clone https://github.com/alphabitdev/tt
-chmod +x tt/init.sh
-tt/init.sh
+cd tt
+chmod +x ./init.sh
+./init.sh
 ```
 
 step 1: update
@@ -16,16 +17,16 @@ step 5: add user to admin group
 
 step 6: restrict su to admin group
 
-step 7: test user
+step 7: secure sshd
 
-step 8: secure sshd
+step 8: ip hardening
 
-step 9: ip hardening
+step 9: prevent ip spoofing
 
-step 10: prevent ip spoofing
+step 10: firewall
 
-step 11: firewall
+step 11: fail2ban
 
-step 12: fail2ban
+step 12: ntp
 
-step 13: ntp
+step 13: selinux
