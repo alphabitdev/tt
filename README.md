@@ -18,10 +18,8 @@ step 7: secure sshd
 
 step 8: ip hardening
 
-step 9: prevent ip spoofing
+step 9: firewall
 
-step 10: firewall
+step 10: fail2ban
 
-step 11: fail2ban
-
-step 12: ntp
+step 11: ntp

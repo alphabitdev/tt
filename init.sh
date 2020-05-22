@@ -35,15 +35,12 @@ sysctl --system
 service procps start
 
 # 9
-cat ./files/host.conf > /etc/host.conf
-
-# 10
 apt install ufw -y
 ufw reset
 ufw allow 22/tcp
 ufw enable
 
-# 11
+# 10
 apt install fail2ban -y
 touch /etc/fail2ban/jail.d/ssh.conf
 echo "[sshd]
@@ -57,6 +54,6 @@ systemctl restart fail2ban
 fail2ban-client status
 fail2ban-client status sshd
 
-# 12
+# 11
 apt install ntp -y
 sntp --version
