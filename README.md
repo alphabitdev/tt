@@ -28,5 +28,3 @@ step 10: firewall
 step 11: fail2ban
 
 step 12: ntp
-
-step 13: selinux

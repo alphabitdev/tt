@@ -62,27 +62,3 @@ fail2ban-client status sshd
 # 12
 apt install ntp -y
 sntp --version
-
-
-# 13
-systemctl stop apparmor
-apt purge apparmor -y
-apt update
-apt upgrade -yuf
-apt install selinux selinux-utils selinux-basics auditd audispd-plugins -y
-sestatus
-
-echo "# This file controls the state of SELinux on the system.
-# SELINUX= can take one of these three values:
-# enforcing - SELinux security policy is enforced.
-# permissive - SELinux prints warnings instead of enforcing.
-# disabled - No SELinux policy is loaded.
-SELINUX=enforcing
-# SELINUXTYPE= can take one of these two values:
-# default - equivalent to the old strict and targeted policies
-# mls     - Multi-Level Security (for military and educational use)
-# src     - Custom policy built from source
-SELINUXTYPE=default
-
-# SETLOCALDEFS= Check local definition changes
-SETLOCALDEFS=0" > /etc/selinux/config
