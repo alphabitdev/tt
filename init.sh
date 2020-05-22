@@ -35,9 +35,7 @@ sysctl --system
 service procps start
 
 # 9
-echo "# The "order" line is only used by old versions of the C library.
-​order bind,hosts
-​nospoof on" > /etc/host.conf
+cp ./files/host.conf > /etc/host.conf
 
 # 10
 apt install ufw -y
