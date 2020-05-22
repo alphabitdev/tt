@@ -15,8 +15,8 @@ locale-gen en_US.UTF-8
 dpkg-reconfigure locales
 
 # 4
-chmod u+x scripts/newUser.sh
-./scripts/newUser.sh alpha
+chmod u+x scripts/newSSHUser.sh
+./scripts/newSSHUser.sh alpha
 
 # 5
 sudo usermod -aG sudo alpha
@@ -52,9 +52,8 @@ apt install ntp -y
 sntp --version
 
 
-cmp --silent ./files/sshd_config /etc/ssh/sshd_config || echo "sshd_config IS NOT COPIED!!!!"
-cmp --silent ./files/sysctl.conf /etc/sysctl.conf || echo "sysctl.conf IS NOT COPIED!!!!"
-cmp --silent ./files/sshjail.conf /etc/fail2ban/jail.d/ssh.conf || echo "sshjail.conf IS NOT COPIED!!!!"
+cmp --silent ./files/sshd_config /etc/ssh/sshd_config && echo "sshd_config copied" || echo "sshd_config IS NOT COPIED!!!!"
+cmp --silent ./files/sshjail.conf /etc/fail2ban/jail.d/ssh.conf && echo "sshjail.conf copied" || echo "sshjail.conf IS NOT COPIED!!!!"
+
+echo "sudo reboot"
 su alpha
-echo "REBOOOOT"
-sudo reboot
