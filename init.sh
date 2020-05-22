@@ -35,7 +35,7 @@ sysctl --system
 service procps start
 
 # 9
-cp ./files/host.conf > /etc/host.conf
+cat ./files/host.conf > /etc/host.conf
 
 # 10
 apt install ufw -y
