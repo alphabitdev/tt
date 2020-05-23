@@ -1,7 +1,7 @@
 # 1
-#apt-get update
-#apt-get -y upgrade
-#apt-get -y full-upgrade
+apt-get update
+apt-get -y upgrade
+apt-get -y full-upgrade
 
 # 2
 echo "tmpfs     /run/shm     tmpfs     defaults,noexec,nosuid     0 0" >> /etc/fstab
