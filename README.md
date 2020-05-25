@@ -2,6 +2,11 @@
 git clone https://github.com/alphabitdev/tt && cd tt && chmod +x ./init.sh && ./init.sh
 ```
 
+```
+git clone https://github.com/alphabitdev/tt && cd tt/scripts && chmod +x ./domain.sh
+./domain DOMAIN USER
+```
+
 step 1: update
 
 step 2: Secure shared memory

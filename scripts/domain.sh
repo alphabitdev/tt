@@ -9,7 +9,7 @@ DOMAIN=$1
 USER=$2
 sudo echo "server {
 	listen 80;
-	listen [::]:80 ipv6only=on;
+	listen [::]:80;
 
 	server_name $DOMAIN;
 
