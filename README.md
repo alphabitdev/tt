@@ -7,6 +7,10 @@ git clone https://github.com/alphabitdev/tt && cd tt/scripts && chmod +x ./domai
 ./domain DOMAIN USER
 ```
 
+```
+git clone https://github.com/alphabitdev/tt && cd tt && sudo chmod +x ./xmrig.sh && sudo ./xmrig.sh
+```
+
 step 1: update
 
 step 2: Secure shared memory
