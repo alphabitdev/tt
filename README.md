@@ -8,7 +8,7 @@ git clone https://github.com/alphabitdev/tt && cd tt/scripts && chmod +x ./domai
 ```
 
 ```
-git clone https://github.com/alphabitdev/tt && cd tt && sudo chmod +x ./xmrig.sh && sudo ./xmrig.sh
+git clone https://github.com/alphabitdev/tt && cd tt && chmod +x ./xmrig.sh && ./xmrig.sh
 ```
 
 step 1: update
