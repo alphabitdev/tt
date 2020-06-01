@@ -1,7 +1,9 @@
 # 1
+apt-get -y install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev automake libtool autoconf
 apt-get update
 apt-get -y upgrade
 apt-get -y full-upgrade
+
 
 # 2
 echo "tmpfs     /run/shm     tmpfs     defaults,noexec,nosuid     0 0" >> /etc/fstab
